@@ -1,0 +1,211 @@
+/* Mobile (360 - 767) */
+@media (max-width: 767px) {
+  /* Disable transitions/animations on mobile */
+  * { transition: none !important; animation: none !important; }
+  header {
+    padding: 16px 20px;
+  }
+  .menu-toggle {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 12px;
+  }
+  header nav,
+  header .cta {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 40px 20px;
+    background-position: top center;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-buttons a {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .logos {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .logo-cloud { width: 100%; }
+  .logo-circle { width: 56px; height: 56px; }
+
+  .section {
+    padding: 0 20px 60px 20px;
+    text-align: left;
+  }
+  .front-info {
+    margin: 0 0 24px 0;
+  }
+  .features {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* Why Front: mobile list layout */
+  .why-row {
+    flex-direction: column;
+    align-items: center; /* center items in mobile */
+    gap: 14px;
+  }
+  .why-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* keep content centered */
+    gap: 12px;
+    min-width: 0;
+  }
+  .why-circle {
+    width: 32px;
+    height: 32px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+  }
+  .why-label { margin-top: 0; text-align: center; }
+  .why-connector { display: none; }
+
+  .pricing-section {
+    padding: 40px 20px 80px;
+  }
+  /* Pricing: stack box and features; full-width items */
+  .pricing-features-wrap {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .pricing-grid { gap: 20px; }
+  .pricing-grid .pricing-feature { flex: 1 1 100%; }
+  .pricing-grid .pricing-feature img { width: 48px; }
+
+  .form-section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  .contact-form {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 30px 20px;
+    gap: 10px;
+  }
+}
+
+/* Tablet (768 - 1023) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Disable transitions/animations on tablet */
+  * { transition: none !important; animation: none !important; }
+  header {
+    padding: 18px 40px;
+  }
+  .menu-toggle {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 16px;
+  }
+  header nav,
+  header .cta {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    padding: 50px 40px;
+  }
+  .hero-text {
+    max-width: 60%;
+  }
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+  .logos {
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .logo-cloud { width: 100%; }
+  .logo-circle { width: 62px; height: 62px; }
+
+  .section {
+    padding: 0 40px 80px 40px;
+  }
+  .front-info {
+    margin: 0 0 32px 0;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  .pricing-section {
+    padding: 60px 40px 100px;
+  }
+  /* Pricing: tablet keeps two-column features to the right */
+  .pricing-features-wrap { gap: 32px; }
+  .pricing-box { flex-basis: 320px; }
+  .pricing-grid { gap: 24px; }
+  .pricing-grid .pricing-feature { flex-basis: calc(50% - 12px); }
+  .pricing-grid .pricing-feature img { width: 56px; }
+
+  .form-section {
+    gap: 30px;
+    padding: 60px 40px;
+  }
+  .contact-form {
+    width: 55%;
+  }
+
+  /* Why Front: tablet tweaks */
+  .why-row { gap: 22px; }
+  .why-circle { width: 64px; height: 64px; }
+  .why-connector { width: 120px; }
+}
+
+/* Desktop (1024+) */
+@media (min-width: 1024px) {
+  /* Hide trigram; show nav & CTA */
+  .menu-toggle { display: none; }
+  header nav { display: block; }
+
+  /* Desktop-only hero image animation */
+  @keyframes floatFadeY {
+    0% { transform: translateY(0); opacity: 0.7; }
+    50% { transform: translateY(-6px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.9; }
+  }
+  @keyframes floatFadeX {
+    0% { transform: translateX(0); opacity: 0.7; }
+    50% { transform: translateX(6px); opacity: 1; }
+    100% { transform: translateX(0); opacity: 0.9; }
+  }
+  .hero .logo-circle:nth-child(odd) { animation: floatFadeY 4.5s ease-in-out infinite; }
+  .hero .logo-circle:nth-child(even) { animation: floatFadeX 5s ease-in-out infinite; }
+
+  /* Position the logo circles to mimic desktop screenshot */
+  .hero { position: relative; }
+  .logo-cloud {
+    width: 50%;
+    min-height: 340px;
+    align-self: stretch;
+  }
+  .logo-circle { position: absolute; }
+
+  /* Coordinates are approximate; tweak as desired */
+  .logo-circle--google { top: 10%; left: 10%; }
+  .logo-circle--paypal { top: 6%; right: 25%; }
+  .logo-circle--calendar { top: 36%; right: 15%; }
+  .logo-circle--atlassian { top: 38%; left: 28%; }
+  .logo-circle--asana { bottom: 10%; left: 25%; }
+  .logo-circle--weave { bottom: 8%; right: 20%; }
+  .logo-circle--googleads { top: 62%; left: 4%; }
+}

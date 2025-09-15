@@ -4,21 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-xh6UQdhmGD6sQvUo/y3xNqf3E9k2t7FqY3v0gJwQ0Q+7jVt7D6xkK4wRzq7lKZ3GgT+qVn7b1Zk0tqS01a2R3A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>SaaS Company</title>
 </head>
 <body>
   <header>
-    <div class="logo">Front</div>
+    <img src="assets/logos/logo-front.svg" alt="Front logo" class="logo-img" />
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Learn</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Hire us</a></li>
+        <li><a href="#"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+        <li><a href="#"><i class="fa-solid fa-layer-group"></i><span>Features</span></a></li>
+        <li><a href="#"><i class="fa-solid fa-graduation-cap"></i><span>Learn</span></a></li>
+        <li><a href="#"><i class="fa-solid fa-tag"></i><span>Pricing</span></a></li>
+        <li><a href="#"><i class="fa-solid fa-handshake"></i><span>Hire us</span></a></li>
       </ul>
     </nav>
-    <a href="#" class="cta">Buy Now</a>
+    <a href="#" class="cta"><i class="fa-solid fa-bag-shopping"></i><span>Buy Now</span></a>
   </header>
 
   <section class="hero">
@@ -26,48 +29,108 @@
       <h1>Empowering teams with the freedom</h1>
       <p>Own the unlimited power of the web development</p>
       <div class="hero-buttons">
-        <a href="#" class="btn-primary">Play Video</a>
-        <a href="#" class="btn-secondary">Learn more</a>
+        <a href="#" class="btn-primary"><i class="fa-solid fa-circle-play"></i><span>Play Video</span></a>
+        <a href="#" class="btn-secondary"><i class="fa-solid fa-circle-info"></i><span>Learn more</span></a>
       </div>
     </div>
-    <div class="logos">
-      <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google" />
-      <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal" />
-      <img src="https://img.icons8.com/color/48/calendar--v1.png" alt="Calendar" />
+    <div class="logos logo-cloud" aria-label="Customer logos">
+      <div class="logo-circle logo-circle--google" title="Google">
+        <img src="assets/logos/google.png" alt="Google" />
+      </div>
+      <div class="logo-circle logo-circle--paypal" title="PayPal">
+        <img src="assets/logos/paypal.jpg" alt="PayPal" />
+      </div>
+      <div class="logo-circle logo-circle--calendar" title="Calendar">
+        <img src="assets/logos/calendar.png" alt="Calendar" />
+      </div>
+      <div class="logo-circle logo-circle--atlassian" title="Atlassian">
+        <img src="assets/logos/atlassian.png" alt="Atlassian" />
+      </div>
+      <div class="logo-circle logo-circle--asana" title="Asana">
+        <img src="assets/logos/asana.png" alt="Asana" />
+      </div>
+      <div class="logo-circle logo-circle--weave" title="Weave">
+        <img src="assets/logos/weave.png" alt="Weave" />
+      </div>
+      <div class="logo-circle logo-circle--googleads" title="Google Ads">
+        <img src="assets/logos/google-ads.png" alt="Google Ads" />
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="why-front-section">
     <h2>Why Front?</h2>
-    <p>Front is an incredibly beautiful, fully responsive, and mobile-first project on the web - it is the starting point for creative sites</p>
-    <div class="features">
-      <div>Basic elements</div>
-      <div>Components</div>
-      <div>Combined components</div>
-      <div>Page layouts</div>
+    <p class="front-info">Front is an incredibly beautiful, fully responsive, and mobile-first projects on the web - it is the starting point for creative sites</p>
+    <div class="why-row" role="list">
+      <div class="why-item" role="listitem">
+        <div class="why-circle">
+          <div class="why-circle-dot"></div>
+        </div>
+        <div class="why-label">Basic elements</div>
+      </div>
+      <div class="why-connector"></div>
+      <div class="why-item" role="listitem">
+        <div class="why-circle">
+          <div class="why-circle-dot"></div>
+        </div>
+        <div class="why-label">Components</div>
+      </div>
+      <div class="why-connector"></div>
+      <div class="why-item" role="listitem">
+        <div class="why-circle">
+          <div class="why-circle-dot"></div>
+        </div>
+        <div class="why-label">Combined components</div>
+      </div>
+      <div class="why-connector"></div>
+      <div class="why-item" role="listitem">
+        <div class="why-circle">
+          <div class="why-circle-dot"></div>
+        </div>
+        <div class="why-label">Page layouts</div>
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="pricing-section">
     <h2>Pricing</h2>
     <p>No additional costs. Pay for what you use</p>
-    <div class="features">
+    <div class="features pricing-features-wrap">
       <div class="pricing-box">
         <h3>59 <span>/ mo</span></h3>
+        <div class="line-divider"></div>
         <p>Start your Front business now. 100% guaranteed money back. No questions asked.</p>
-        <a href="#" class="btn-primary">Play Video</a>
+        <a href="#" class="btn-primary"><i class="fa-solid fa-circle-play"></i><span>Play Video</span></a>
       </div>
-      <div>
-        <h4>Hundreds of components</h4>
-        <p>Achieve maximum productivity with minimum effort.</p>
-        <h4>Images included</h4>
-        <p>Custom licensed premium images included.</p>
-      </div>
-      <div>
-        <h4>Cancel anytime</h4>
-        <p>No hidden costs or fees.</p>
-        <h4>Money back</h4>
-        <p>100% guaranteed refund policy.</p>
+      <div class="pricing-grid">
+        <div class="components pricing-feature">
+          <img src="assets/images/components.svg" alt="components" />
+          <div class="pricing-feature-text">
+            <h4>Hundreds of components</h4>
+            <p>Achieve maximum productivity with minimum effort with Front and create robust Limitless products.</p>
+          </div>
+        </div>
+        <div class="images pricing-feature">
+          <img src="assets/images/images.svg" alt="images included" />
+          <div class="pricing-feature-text">
+            <h4>Images included</h4>
+            <p>Images included We made custom license for all our premium images in the Front.</p>
+          </div>
+        </div>
+        <div class="cancellation pricing-feature">
+          <img src="assets/images/cancel.svg" alt="cancel icons"/>
+          <div class="pricing-feature-text">
+            <h4>Cancel anytime</h4>
+            <p>If it's not for you, just cancel, no hidden costs or fees.</p>
+          </div>
+        </div>
+        <div class="money-back pricing-feature">
+          <img src="assets/images/moneyback.svg" alt="money back icon"/>
+          <div class="pricing-feature-text">
+            <h4>Money back</h4>
+            <p>100% guaranteed money back. No questions asked.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -90,7 +153,8 @@
       <select><option>Country</option></select>
       <textarea placeholder="Tell us about your project..."></textarea>
       <label><input type="checkbox" /> Yes, I’d like to receive marketing emails</label>
-      <button class="btn-primary" type="submit">Submit Form</button>
+      <a href="#" class="privacy-link"><i class="fa-solid fa-shield"></i><span>View privacy policy</span></a>
+      <button class="btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i><span>Submit Form</span></button>
     </form>
   </section>
 
@@ -102,19 +166,39 @@
     </div>
     <div>
       <h4>Company</h4>
-      <p>About<br />Career<br />Blog<br />Customers<br />Hire us</p>
+      <p>
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>About</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Career</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Blog</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Customers</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Hire us</span></a>
+      </p>
     </div>
     <div>
       <h4>Features</h4>
-      <p>Press<br />Release notes<br />Integrations<br />Pricing</p>
+      <p>
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Press</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Release notes</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Integrations</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Pricing</span></a>
+      </p>
     </div>
     <div>
       <h4>Documentation</h4>
-      <p>Support<br />Docs<br />Status<br />API Reference<br />Tech Requirements</p>
+      <p>
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Support</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Docs</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Status</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>API Reference</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Tech Requirements</span></a>
+      </p>
     </div>
     <div>
       <h4>Resources</h4>
-      <p>Help<br />Your Account</p>
+      <p>
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Help</span></a><br />
+        <a href="#" class="footer-link"><i class="fa-solid fa-circle-dot"></i><span>Your Account</span></a>
+      </p>
     </div>
   </footer>
 </body>
